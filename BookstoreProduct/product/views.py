@@ -21,7 +21,6 @@ if temp is not None and len(temp) >= 0:
 
 logger.info("DETAILS_SVC_URL is %s" % DETAILS_SVC_URL)
 
-
 RATINGS_SVC_URL = "http://ratingsservice:8083/ratings/ratings/"
 temp = os.getenv("RATINGS_SVC_URL")
 if temp is not None and len(temp) >= 0:
