@@ -39,7 +39,6 @@ NUM_OF_BOOK_ITEMS = 1
 temp = os.getenv("NUM_OF_BOOK_ITEMS")
 if temp is not None and len(temp) >= 0:
     NUM_OF_BOOK_ITEMS = int(temp)
-
 logger.info("NUM_OF_BOOK_ITEMS is %d" % NUM_OF_BOOK_ITEMS)
 
 SPACE = "&nbsp;"
