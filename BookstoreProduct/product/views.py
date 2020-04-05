@@ -35,6 +35,13 @@ if temp is not None and len(temp) >= 0:
 
 logger.info("REVIEWS_SVC_URL is %s" % REVIEWS_SVC_URL)
 
+NUM_OF_BOOK_ITEMS = 1
+temp = os.getenv("NUM_OF_BOOK_ITEMS")
+if temp is not None and len(temp) >= 0:
+    NUM_OF_BOOK_ITEMS = int(temp)
+
+logger.info("NUM_OF_BOOK_ITEMS is %d" % NUM_OF_BOOK_ITEMS)
+
 SPACE = "&nbsp;"
 
 
@@ -49,7 +56,6 @@ def blank(requests):
     response_str = "Hello world, product " + VERSION + " @ " + str(datetime.datetime.now()) + " !"
     return HttpResponse(response_str)
 
-
 def product(request):
     logger.info("Enter product()")
 
@@ -63,7 +69,7 @@ def product(request):
     response_str += "<b>Version: " + VERSION + "</b>, " + str(datetime.datetime.now()) + "<hr>"
 
     #for each book
-    for i in range(1):
+    for i in range(NUM_OF_BOOK_ITEMS):
         book_id = str(i)
 
         logger.info("Getting data for book with id " + book_id)
