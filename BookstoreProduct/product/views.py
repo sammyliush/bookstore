@@ -11,6 +11,7 @@ os.environ['no_proxy'] = '*'
 
 logger = logging.getLogger('django')
 
+#try to get details service URL from Env
 
 DETAILS_SVC_URL = "http://detailsservice:8082/details/details/"
 
