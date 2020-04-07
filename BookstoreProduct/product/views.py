@@ -170,7 +170,7 @@ def ratings(request):
     response_text = ""
     book_id = "1"
 
-    for i in range(10):
+    for i in range(NUM_OF_BOOK_ITEMS):
         book_id = str(i)
         try:
             session = requests.session()
